@@ -4,3 +4,4 @@ select
     order_date,
     status
 from {{ source('jaffle_shop', 'orders') }}
+where order_date is not null
